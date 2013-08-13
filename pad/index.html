@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <head>
+    <title>pad</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+	<meta name="MobileOptimized" content="176">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="PalmComputingPlatform" content="true">
+	
+	<link type="text/css" href="pad.css" rel="stylesheet"/>
+
+	<script src="/lib/jquery/jquery.js"></script>
+	<script src="/lib/socket.io/socket.io.js"></script>
+	<script src="/core/class.js"></script>
+	<script src="pad.js"></script>
+	<script>
+		$(function () {
+			var pad = new Pad($('.pad'));
+		});
+	</script>
+  </head>
+  <body>
+	  <div class="pad">
+		  <div class="btn btn-up" rel="up"></div>
+		  <div class="btn btn-right" rel="right"></div>
+		  <div class="btn btn-down" rel="down"></div>
+		  <div class="btn btn-left" rel="left"></div>
+		  <div class="btn btn-connect" rel="connect">connect</div>
+		  <div class="btn btn-fire" rel="fire">FIRE</div>
+		  <div class="indicator"></div>
+	  </div>
+  </body>
+</html>
