@@ -35,7 +35,8 @@
 			this.splintersImpulse = 1;
 			this.splintersDistance = 0.8;
 			this.splintersScale = this.scale/2.5
-			var fixDef = new Game.B2FixtureDef();
+
+			//take random asteroid form and create it
 			var formDef = FORMS[Math.round(Math.random())];
 			var form = [];
 			for (var i = formDef.length; i--;) {
@@ -44,6 +45,8 @@
 				form[i].x *= this.scale;
 				form[i].y *= this.scale;
 			}
+
+			var fixDef = new Game.B2FixtureDef();
 			fixDef.density = 1.0;
 			fixDef.friction = 0.5;
 			fixDef.restitution = 0.2;
@@ -85,7 +88,7 @@
 			}
 		},
 		
-		_onContact: function (fixture) {
+		_onContact: function (fixture, impulse, contact) {
 			if (this.isDead) return;
 			var object = fixture.GetBody().GetUserData();
 			if (!object) return;

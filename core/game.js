@@ -36,7 +36,7 @@
 			this.debugDraw.SetLineThickness(1.0);
 			this.debugDraw.SetFlags(Game.B2DebugDraw.e_shapeBit | Game.B2DebugDraw.e_jointBit);
 			this.world.SetDebugDraw(this.debugDraw);
-			$el.html(this.$canvas);	
+			$el.html(this.$canvas);
 			
 			this.protocol = new Protocol(this);
 			this.protocol.connect();
